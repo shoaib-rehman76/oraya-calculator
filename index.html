@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="./script.js" defer></script>
+    <title>Oraya Calculator</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="header-section">
+        <div>
+          <img
+            src="https://assets-global.website-files.com/6315e87c41e3574cf62f44c5/6315ea421b1c767149b1b534_betterco-dark.svg"
+            alt="logo"
+          />
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <div class="left-content">
+            <div class="left-content-1 content-header">
+              <span>Choose your currency</span>
+              <select id="select" name="currency">
+                <option selected disabled>currency</option>
+                <option value="de-DE">EURO</option>
+                <option value="en-US">USD</option>
+              </select>
+            </div>
+            <div class="left-content-2 content-header">
+              <span>Customer Onboarding</span>
+              <div class="wrapper">
+                <div class="inner-wrapper">
+                  <p>How many products do you sell?</p>
+                  <div class="range-value">
+                    <small class="showRangeValue" id="showRangeValue1"></small>
+                  </div>
+                  <div class="range">
+                    <input
+                      type="range"
+                      value="50"
+                      min="50"
+                      max="300000"
+                      name="range1"
+                      id="range1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper">
+                <div class="inner-wrapper">
+                  <p>How many comeptitors do you have?</p>
+                  <div class="range-value">
+                    <small class="showRangeValue" id="showRangeValue2"></small>
+                  </div>
+                  <div class="range">
+                    <input
+                      type="range"
+                      value="1"
+                      min="1"
+                      max="50"
+                      name="range2"
+                      id="range2"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper">
+                <div class="inner-wrapper">
+                  <p>How often do you want to monitor your competitors?</p>
+                  <select name="" id="monitorCompetitor">
+                    <option value="720">Every hour</option>
+                    <option value="30">Every day</option>
+                    <option value="4" selected>Every week</option>
+                    <option value="1">Every month</option>
+                    <option value="0.33">Every quarter</option>
+                    <option value="0.0833">Every year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="wrapper">
+                <div class="inner-wrapper">
+                  <p>
+                    For how many of these products do you want to monitor your
+                    competition?(Focus group)
+                  </p>
+                  <div class="range-value">
+                    <small class="showRangeValue" id="showRangeValue3"></small>
+                  </div>
+                  <div class="range">
+                    <input
+                      type="range"
+                      value="10"
+                      min="5"
+                      max="30000"
+                      name="range3"
+                      id="range3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper">
+                <div class="inner-wrapper">
+                  <p>
+                    How many of these products are your topsellers and need
+                    special attention?(topseller)
+                  </p>
+                  <div class="range-value">
+                    <small class="showRangeValue" id="showRangeValue4"></small>
+                  </div>
+                  <div class="range">
+                    <input
+                      type="range"
+                      value="2"
+                      min="1"
+                      max="5000"
+                      name="range4"
+                      id="range4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="left-content-3 content-header">
+              <div class="customer_monitoring">
+                <span>Customer Monitoring</span>
+                <span class="material-symbols-outlined hideContent" id="expand">
+                  expand_less
+                </span>
+                <span
+                  class="material-symbols-outlined hide showContent"
+                  id="collapse"
+                >
+                  expand_more
+                </span>
+              </div>
+              <div class="hide" id="accordion">
+                <p>
+                  How many of your product do your competitor have as well
+                  (etimated average)?
+                </p>
+
+                <div class="wrapper">
+                  <h5>Focus group</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue5"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        value="70"
+                        min="10"
+                        max="100"
+                        name="range5"
+                        id="range5"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="wrapper">
+                  <h5>Top seller</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue6"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        value="90"
+                        min="10"
+                        max="100"
+                        name="range6"
+                        id="range6"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p>Average change rate of competitor products per week?</p>
+
+                <div class="wrapper">
+                  <h5>Focus group</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue7"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        value="10"
+                        min="1"
+                        max="100"
+                        name="range7"
+                        id="range7"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="wrapper">
+                  <h5>Top seller</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue8"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        value="30"
+                        min="1"
+                        max="100"
+                        name="range8"
+                        id="range8"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  How much time does it take you to manually monitor one
+                  porduct?
+                </p>
+
+                <div class="wrapper">
+                  <h5>Focus group</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue9"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        step="0.5"
+                        value="0.5"
+                        min="0.5"
+                        max="10"
+                        name="range9"
+                        id="range9"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="wrapper">
+                  <h5>Top seller</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue10"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        step="0.5"
+                        value="0.5"
+                        min="0.5"
+                        max="10"
+                        name="range10"
+                        id="range10"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  How much time does it take you to manually collect the changed
+                  data per product?
+                </p>
+
+                <div class="wrapper">
+                  <h5>Focus group</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue11"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        step="0.5"
+                        value="1"
+                        min="0.5"
+                        max="20"
+                        name="range11"
+                        id="range11"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="wrapper">
+                  <h5>Top seller</h5>
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue12"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        step="0.5"
+                        min="0.5"
+                        max="20"
+                        value="1"
+                        name="range12"
+                        id="range12"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <p>How much do you pay for an employee per hour?</p>
+                <div class="wrapper">
+                  <div class="inner-wrapper">
+                    <div class="range-value">
+                      <small
+                        class="showRangeValue"
+                        id="showRangeValue13"
+                      ></small>
+                    </div>
+                    <div class="range">
+                      <input
+                        type="range"
+                        value="50"
+                        min="10"
+                        max="200"
+                        name="range13"
+                        id="range13"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="right-content-1 content-header">
+              <div class="inner-content">
+                <p>Based on what you told us</p>
+                <h4>You can save</h4>
+                <h2>
+                  <span> </span>
+                  <span id="cost1" class="cost">33.860</span>
+                </h2>
+              </div>
+              <small>over one year</small>
+            </div>
+            <div class="break-down-section">
+              <h5>Breakdown of your current cost</h5>
+            </div>
+            <div class="right-content-2">
+              <div class="locked-content-1 content-header">
+                <div class="locked-content-1-header">
+                  <span>Task</span>
+                  <span>Costs</span>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span>Identify your competitors</span>
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span> </span><span id="cost2" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span>
+                      Regularly monitor product changes of a competitor (part /x
+                      competitors)
+                    </span>
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span></span>
+                      <span id="cost3" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span
+                      >Acquire pricing data from those competitors (portfolio
+                      part)</span
+                    >
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span></span>
+                      <span id="cost4" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span
+                      >Regularly monitor product changes of a competitor
+                      (topseller/competitors)</span
+                    >
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span> </span>
+                      <span id="cost5" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span
+                      >Acquire pricing data from those competitors (top
+                      seller)</span
+                    >
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span></span>
+                      <span id="cost6" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span>Analyze that data (part portfolio)</span>
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span></span>
+                      <span id="cost7" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content margin-bottom">
+                  <div>
+                    <span>Analyze that data (top seller)</span>
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span></span>
+                      <span id="cost8" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-locked-content">
+                  <div>
+                    <span>Sum</span>
+                  </div>
+                  <div class="blur">
+                    <p>
+                      <span></span>
+                      <span id="cost9" class="cost">33.860</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="break-down-section">
+              <h5>Breakdown of potential savings</h5>
+            </div>
+            <div class="right-content-2 content-header">
+              <div class="inner-locked-content margin-bottom">
+                <div>
+                  <span>Identify your competitors</span>
+                </div>
+                <div class="blur">
+                  <p>
+                    <span></span>
+                    <span id="cost10" class="cost">33.860</span>
+                  </p>
+                </div>
+              </div>
+              <div class="inner-locked-content margin-bottom">
+                <div>
+                  <span
+                    >Regularly monitor product changes of a competitor (x
+                    competitors)</span
+                  >
+                </div>
+                <div class="blur">
+                  <p>
+                    <span> </span>
+                    <span id="cost11" class="cost">33.860</span>
+                  </p>
+                </div>
+              </div>
+              <div class="inner-locked-content margin-bottom">
+                <div>
+                  <span>Acquire pricing data from those competitors</span>
+                </div>
+                <div class="blur">
+                  <p>
+                    <span> </span><span id="cost12" class="cost">33.860</span>
+                  </p>
+                </div>
+              </div>
+              <div class="inner-locked-content margin-bottom">
+                <div>
+                  <span>Analyze that data</span>
+                </div>
+                <div class="blur">
+                  <p>
+                    <span> </span><span id="cost13" class="cost">33.860</span>
+                  </p>
+                </div>
+              </div>
+              <div class="inner-locked-content">
+                <div>
+                  <span>Total cost per month</span>
+                </div>
+                <div class="blur">
+                  <p>
+                    <span> </span>
+                    <span id="cost14" class="cost">33.860</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="right-content-3 content-header">
+              <div>
+                <span>Total saving over One year</span>
+                <h4 class="blur">
+                  <span></span>
+                  <span id="cost15" class="cost">33.860</span>
+                </h4>
+              </div>
+              <button>Get your detailed results</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
